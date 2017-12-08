@@ -7,18 +7,21 @@ using System.Threading.Tasks;
 
 namespace RentalServiceAPI.Model
 {
-    public class SettingsValueType : Entity<int>
+    public class ValueType : Entity<int>
     {
         public string DisplayName { get; set; }
         public ValueFormat ValueFormat { get; set; }
 
         public virtual ICollection<SettingsValue> SettingsValues { get; set; } = new List<SettingsValue>();
+        public virtual ICollection<TitleMetaValue> TitleMetaValue { get; set; } = new List<TitleMetaValue>();
     }
 
     public enum ValueFormat
     {
         Int,
         String,
-        Decimal
+        Decimal,
+        DateTime
+
     }
 }

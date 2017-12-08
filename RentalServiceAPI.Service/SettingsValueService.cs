@@ -25,5 +25,15 @@ namespace RentalServiceAPI.Service
         {
             return _settingsValueRepository.GetById(id);
         }
+
+        public bool ValidateUserPaymentId(Guid settingsValueId, string userId)
+        {
+            var settingsValue = _settingsValueRepository.GetById(settingsValueId);
+            if (settingsValue == null) return false;
+            //Make sure that the owner of this payment method is the user attempting to use it. 
+            //And also make sure it's actually a payment method.
+            return settingsValue.UserId == userId && settingsValue.ValueType.Id == 5;
+
+        }
     }
 }

@@ -11,5 +11,6 @@ namespace RentalServiceAPI.Service.Interfaces
     public interface ITitleService : IEntityService<Title>
     {
         Title GetById(Guid id);
+        IEnumerable<Title> GetTitlesByGenreMetaTag(string genreValue);
     }
 }

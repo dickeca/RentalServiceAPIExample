@@ -8,8 +8,8 @@ using RentalServiceAPI.Service.Generics;
 
 namespace RentalServiceAPI.Service.Interfaces
 {
-    public interface ISettingsValueTypeService : IEntityService<SettingsValueType>
+    public interface ITitleMetaValueService : IEntityService<TitleMetaValue>
     {
-        SettingsValueType GetById(int id);
+        TitleMetaValue GetById(Guid id);
     }
 }

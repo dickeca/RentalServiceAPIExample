@@ -20,14 +20,14 @@ namespace RentalServiceAPI.Repository
         {
             return _entities.Set<SettingsValue>()
                 .Include(x => x.User)
-                .Include(x => x.SettingsValueType)
+                .Include(x => x.ValueType)
                 .AsEnumerable();
         }
 
         public SettingsValue GetById(Guid id)
         {
             return _dbset.Include(x => x.User)
-                .Include(x => x.SettingsValueType)
+                .Include(x => x.ValueType)
                 .FirstOrDefault(x => x.Id == id);         
         }
     }

@@ -5,13 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using RentalServiceAPI.Model;
 using RentalServiceAPI.Service.Generics;
+using ValueType = RentalServiceAPI.Model.ValueType;
 
 namespace RentalServiceAPI.Service.Interfaces
 {
-    public interface ISettingsValueService : IEntityService<SettingsValue>
+    public interface IValueTypeService : IEntityService<ValueType>
     {
-        SettingsValue GetById(Guid id);
-        bool ValidateUserPaymentId(Guid settingsValueId, string userId);
-
+        ValueType GetById(int id);
     }
 }

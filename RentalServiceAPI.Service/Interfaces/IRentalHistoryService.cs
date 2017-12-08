@@ -11,5 +11,6 @@ namespace RentalServiceAPI.Service.Interfaces
     public interface IRentalHistoryService : IEntityService<RentalHistory>
     {
         RentalHistory GetById(Guid id);
+        IEnumerable<RentalHistory> GetByUserId(string id);
     }
 }

@@ -7,18 +7,19 @@ using System.Threading.Tasks;
 using RentalServiceAPI.Model;
 using RentalServiceAPI.Repository.Generics;
 using RentalServiceAPI.Repository.Interfaces;
+using ValueType = System.ValueType;
 
 namespace RentalServiceAPI.Repository
 {
-    public class SettingsValueTypeRepository : GenericRepository<SettingsValueType>, ISettingsValueTypeRepository
+    public class TitleMetaValueRepository : GenericRepository<TitleMetaValue>, ITitleMetaValueRepository
     {
-        public SettingsValueTypeRepository(DbContext context) : base(context)
+        public TitleMetaValueRepository(DbContext context) : base(context)
         {
         }
 
-        public SettingsValueType GetById(int id)
+        public TitleMetaValue GetById(Guid id)
         {
-            return _dbset.FirstOrDefault(x => x.Id == id);
+            return _dbset.Include(x=> x.Title).FirstOrDefault(x => x.Id == id);
         }
     }
 }

@@ -17,13 +17,13 @@ namespace RentalServiceAPI.Repository
         }
         public override IEnumerable<Title> GetAll()
         {
-            return _entities.Set<Title>()
+            return _entities.Set<Title>().Include(x=> x.TitleMetaValues)
                 .AsEnumerable();
         }
 
         public Title GetById(Guid id)
         {
-            return _dbset
+            return _dbset.Include(x=> x.TitleMetaValues)
                     .FirstOrDefault(x => x.Id == id);
         }
     }

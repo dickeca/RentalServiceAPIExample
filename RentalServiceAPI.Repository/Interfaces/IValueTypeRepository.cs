@@ -5,11 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using RentalServiceAPI.Model;
 using RentalServiceAPI.Repository.Generics;
+using ValueType = RentalServiceAPI.Model.ValueType;
 
 namespace RentalServiceAPI.Repository.Interfaces
 {
-    public interface ISettingsValueTypeRepository : IGenericRepository<SettingsValueType>
+    public interface IValueTypeRepository : IGenericRepository<ValueType>
     {
-        SettingsValueType GetById(int id);
+        ValueType GetById(int id);
     }
 }

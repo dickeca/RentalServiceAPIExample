@@ -25,5 +25,10 @@ namespace RentalServiceAPI.Service
         {
             return _rentalHistoryRepository.GetById(id);
         }
+
+        public IEnumerable<RentalHistory> GetByUserId(string id)
+        {
+            return _rentalHistoryRepository.FindBy(x => x.UserId == id);
+        }
     }
 }

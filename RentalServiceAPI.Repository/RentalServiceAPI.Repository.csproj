@@ -57,10 +57,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\ITitleMetaValueRepository.cs" />
     <Compile Include="Interfaces\IUnitOfWork.cs" />
     <Compile Include="RentalHistoryRepository.cs" />
     <Compile Include="SettingsValueRepository.cs" />
-    <Compile Include="SettingsValueTypeRepository.cs" />
+    <Compile Include="TitleMetaValueRepository.cs" />
+    <Compile Include="ValueTypeRepository.cs" />
     <Compile Include="TitleRepository.cs" />
     <Compile Include="UnitOfWork.cs" />
     <Compile Include="UserRepository.cs" />
@@ -68,7 +70,7 @@
     <Compile Include="Generics\IGenericRepository.cs" />
     <Compile Include="Interfaces\IRentalHistoryRepository.cs" />
     <Compile Include="Interfaces\ISettingsValueRepository.cs" />
-    <Compile Include="Interfaces\ISettingsValueTypeRepository.cs" />
+    <Compile Include="Interfaces\IValueTypeRepository.cs" />
     <Compile Include="Interfaces\ITitleRepository.cs" />
     <Compile Include="Interfaces\IUserRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

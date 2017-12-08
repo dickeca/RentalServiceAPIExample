@@ -15,7 +15,7 @@ namespace RentalServiceAPI.Model
         public DateTime UpdatedDate { get; set; }
         public string UpdatedBy { get; set; }
 
-        public virtual ICollection<SettingsValue> SettingsValues { get; set; }
-        public virtual ICollection<RentalHistory> RentalHistories { get; set; }  
+        public virtual ICollection<SettingsValue> SettingsValues { get; set; } = new List<SettingsValue>();
+        public virtual ICollection<RentalHistory> RentalHistories { get; set; } = new List<RentalHistory>();
     }
 }

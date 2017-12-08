@@ -29,7 +29,14 @@ namespace RentalServiceAPI.Service
             return _titleRepository.GetById(id);
         }
 
-
+        public IEnumerable<Title> GetTitlesByGenreMetaTag(string genreValue)
+        {
+            return
+                _titleRepository.FindBy(
+                    x =>
+                        x.TitleMetaValues.Where(y => y.ValueTypeId == 8)
+                            .Any(y => genreValue == y.Value));
+        } 
         public override void Create(Title entity)
         {
             if (entity == null)

@@ -11,7 +11,6 @@ using Microsoft.Owin.Security.OAuth;
 using Owin;
 using RentalServiceAPI.Model;
 using RentalServiceAPI.Model.Context;
-using RentalServiceAPIExample.Providers;
 using RentalServiceAPIExample.Models;
 
 namespace RentalServiceAPIExample

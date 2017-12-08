@@ -61,17 +61,42 @@
     <Compile Include="Interfaces and Base Classes\Entity.cs" />
     <Compile Include="Interfaces and Base Classes\IAuditableEntity.cs" />
     <Compile Include="Interfaces and Base Classes\IEntity.cs" />
+    <Compile Include="Migrations\201712072318052_InitialCreate.cs" />
+    <Compile Include="Migrations\201712072318052_InitialCreate.Designer.cs">
+      <DependentUpon>201712072318052_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712080429189_Update1.cs" />
+    <Compile Include="Migrations\201712080429189_Update1.Designer.cs">
+      <DependentUpon>201712080429189_Update1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712080516340_Update2.cs" />
+    <Compile Include="Migrations\201712080516340_Update2.Designer.cs">
+      <DependentUpon>201712080516340_Update2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RentalHistory.cs" />
     <Compile Include="Context\RentalServiceDbContext.cs" />
     <Compile Include="SettingsValue.cs" />
-    <Compile Include="SettingsValueType.cs" />
+    <Compile Include="TitleMetaValue.cs" />
+    <Compile Include="ValueType.cs" />
     <Compile Include="Title.cs" />
     <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201712072318052_InitialCreate.resx">
+      <DependentUpon>201712072318052_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712080429189_Update1.resx">
+      <DependentUpon>201712080429189_Update1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712080516340_Update2.resx">
+      <DependentUpon>201712080516340_Update2.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

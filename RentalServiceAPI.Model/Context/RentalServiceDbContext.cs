@@ -11,7 +11,7 @@ namespace RentalServiceAPI.Model.Context
         public virtual DbSet<Title> Titles { get; set; }
         public virtual DbSet<RentalHistory> RentalHistories { get; set; }
         public virtual DbSet<SettingsValue> SettingsValues { get; set; }
-        public virtual DbSet<SettingsValueType> SettingsValueTypes { get; set; }
+        public virtual DbSet<ValueType> ValueTypes { get; set; }
 
         public RentalServiceDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)

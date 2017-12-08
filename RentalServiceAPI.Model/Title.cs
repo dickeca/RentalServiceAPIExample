@@ -13,8 +13,8 @@ namespace RentalServiceAPI.Model
         public int TotalStock { get; set; }
         public int AvailableStock { get; set; } //ideally should always equal total - rentalHistories where Returned = false. 
         public MediaType MediaType { get; set; }
-        public virtual ICollection<RentalHistory> RentalHistories { get; set; }
-
+        public virtual ICollection<RentalHistory> RentalHistories { get; set; } = new List<RentalHistory>();
+        public virtual ICollection<TitleMetaValue> TitleMetaValues { get; set; } = new List<TitleMetaValue>();
     }
 
     public enum MediaType

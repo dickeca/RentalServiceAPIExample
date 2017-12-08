@@ -61,14 +61,16 @@
     <Compile Include="Generics\IEntityService.cs" />
     <Compile Include="Generics\IService.cs" />
     <Compile Include="Interfaces\ISettingsValueService.cs" />
-    <Compile Include="Interfaces\ISettingsValueTypeService.cs" />
+    <Compile Include="Interfaces\IValueTypeService.cs" />
     <Compile Include="Interfaces\ITitleService.cs" />
     <Compile Include="Interfaces\IUserService.cs" />
     <Compile Include="Interfaces\IRentalHistoryService.cs" />
+    <Compile Include="Interfaces\ITitleMetaValueService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RentalHistoryService.cs" />
     <Compile Include="SettingsValueService.cs" />
-    <Compile Include="SettingsValueTypeService.cs" />
+    <Compile Include="TitleMetaValueService.cs" />
+    <Compile Include="ValueTypeService.cs" />
     <Compile Include="TitleService.cs" />
     <Compile Include="UserService.cs" />
   </ItemGroup>

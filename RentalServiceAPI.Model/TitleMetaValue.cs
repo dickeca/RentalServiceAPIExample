@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace RentalServiceAPI.Model
 {
-    public class SettingsValue : AuditableEntity<Guid>
+    public class TitleMetaValue : AuditableEntity<Guid>
     {
         public int ValueTypeId { get; set; }
-        public string UserId { get; set; }
+        public Guid TitleId { get; set; }
         public string Value { get; set; }
         public DateTime CreatedDate { get; set; }
         public string CreatedBy { get; set; }
@@ -18,11 +18,9 @@ namespace RentalServiceAPI.Model
         public string UpdatedBy { get; set; }
 
 
-        [ForeignKey("UserId")]
-        public virtual User User { get; set; }
+        [ForeignKey("TitleId")]
+        public virtual Title Title { get; set; }
         [ForeignKey("ValueTypeId")]
         public virtual ValueType ValueType { get; set; }
-
-        
     }
 }

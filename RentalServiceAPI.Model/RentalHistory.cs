@@ -16,7 +16,8 @@ namespace RentalServiceAPI.Model
         public Guid TitleId { get; set; }
         [Required]
         public CurrentStatus CurrentStatus { get; set; }
-        public DateTime? ReturnDate { get; set; }
+        public DateTime? ReturnByDate { get; set; }
+        public DateTime? ReturnedDate { get; set; }
         [Required]
         public bool Returned { get; set; }
         public DateTime CreatedDate { get; set; }
