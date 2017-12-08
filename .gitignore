@@ -1,4 +1,5 @@
 packages/
 .vs/
-RentalServiceAPIExample/bin/
-RentalServiceAPIExample/obj/
+*/bin/
+*/obj/
+*/bin/
